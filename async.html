@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Weather App</title>
+    <link rel='stylesheet' type='text/css' media='screen' href='/bootstrap.css'>
+<style>
+    #tab {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        height: 50vh;
+        width: 450px;
+        margin-top: 100px;
+        margin-left: 250px;
+        margin-right: 250px;
+    }
+    #name{
+      color: black;
+    }
+    #temperature{
+      color: black;
+      text-align: right;
+    }
+    #weath{
+      color: black;
+    }
+    #about{
+      text-align: center;
+      color: black;
+    }
+</style>
+</head>
+<body class="text-bg-secondary">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid">
+          <label class="navbar-brand text-bg-dark p-3 rounded-4" href="#">Weather</label>
+          <div class="collapse navbar-collapse bg" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">About</a>
+              </li>
+            </ul>
+            <form class="d-flex" role="search" onsubmit="flipkart(); return false;">
+              <input id="data" class="form-control me-2" type="text" placeholder="Enter City">
+              <input class="btn btn-outline-success" type="submit" value="Search">
+            </form>
+          </div>
+        </div>
+      </nav>
+      <div class="d-flex flex-column gap-2 bg border border-secondary p-3 rounded " id="tab">
+          <div class="weather-box d-flex justify-content-between">
+            <img src=" " height="200" width="200" class="rounded-pill ">
+            <div>
+              <h1><span id="name">Welcome</span><br></h1>
+              <span id="temperature"></span><br>
+              <span id="weath"></span>
+            </div>
+          </div>
+      </div>
+      <div id="about">
+        <h3>About</h3>
+        <p>Welcome to weather application here it displays the the searched place weather and also displays the temperature </p>
+      </div>
+
+    <script src='./async.js'></script>
+</body>
+</html>
